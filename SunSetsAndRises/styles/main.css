@@ -1,629 +1,232 @@
-#friendsApp.km-android .km-view
+body, html
 {
-    -moz-box-orient:vertical;
-    -webkit-box-orient:vertical;
-    box-orient:vertical;
-    -webkit-flex-direction:column;
-    -ms-flex-direction:column;
-    flex-direction:column;
-}
-#friendsApp.km-ios, #friendsApp.km-android, #friendsApp.km-ios .km-list > li
-{
-    font-weight: normal;    
-}
-#friendsApp.km-ios .km-listinset, #friendsApp.km-ios .km-listgroupinset .km-list
-{
-    border: 0;
-}
-#friendsApp.km-ios, #friendsApp.km-ios .km-content, #friendsApp.km-android, #friendsApp.km-android .km-content
-{
-    background-image: url(images/app-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #4b2113;
-}
-#friendsApp.km-ios .form-view .km-listinset, #friendsApp.km-android .form-view .km-listinset
-{
-    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);    
-}
-#friendsApp.km-android .km-listview-link::after, #friendsApp.km-android .km-listview-label::after
-{
-    display: block;
-    border-color: rgba(255,255,255,.5);
-    
-}
-.b-top
-{
-    background: transparent url(images/border.png) repeat-x 0 0;
-}
-.b-bottom
-{
-    background: transparent url(images/border.png) repeat-x 0 100%;
-}
-.b-top, .b-bottom
-{
-    background-repeat: repeat-x;
-    background-color: transparent;    
-}
-/* Buttons */
-#friendsApp.km-android .km-leftitem
-{
-    left: 0;
-}
-#friendsApp.km-android .km-rightitem
-{
-    right: 0;
-}
-#friendsApp.km-ios .km-button, #friendsApp.km-android .km-button
-{
-    background-color: #ff6c00;
-}
-#friendsApp.km-ios .km-button, #friendsApp.km-ios .km-back::before
-{
-    -webkit-box-shadow: none;  
-    box-shadow: none; 
-    border: 0;
-}
-#friendsApp.km-ios .km-back, #friendsApp.km-android .km-back
-{
-    background-color: #a36a57;   
-}
-#friendsApp.km-ios .km-back
-{
-    border-top: 0;
-}
-#friendsApp.km-ios .km-back::before
-{
-    left: -0.34em;
-    top: .18em;
-    height: .92em;
-    border-bottom-color: #6e5852;   
-}
-#friendsApp.km-android .km-button
-{
-    color: #fff;
-}
-#friendsApp.km-android .km-navbar .km-button
-{
-    height: 1.6em;
-}
-.km-button.btn-big
-{
-    padding: .5em .5em;    
-    font-size: 1.2em;
-    font-weight: normal;
-}
-.km-button.btn-big
-{
-    min-width: 7em;
-}
-#friendsApp.km-ios .welcome-scrn .btn-signup, #friendsApp.km-android .welcome-scrn .btn-signup
-{
-    background-color: #272727;
-}
-.btn-login::before, .btn-signup::before, .btn-login-fb::before
-{
-    display: block;
-    content: " ";
-    width: 1em;
-    height: 1em;
-    position: absolute;
-    top: .6em;
-    
-    background-image: url(images/sprite.png);
-    background-repeat: no-repeat;
-    background-size: 3em auto;
-    background-color: transparent;
-    background-position: -100px -100px;
-}
-.btn-login::before
-{
-    background-position: 0 -3em;    
-}
-.btn-login-fb::before
-{
-    background-position: 0 -13.9em;
-}
-.btn-signup::before
-{
-    background-position: 0 -4.3em;    
-}
-.btn-login-fb{
-    
-    background-color:#165396 !important;
-}
-.sngl-btn-wrp
-{
-    margin: 2em 1em;   
-    text-align: center;
-}
-/*App Header*/
-#friendsApp.km-ios .km-navbar
-{
-    background-image: none;   
-    background-color: rgba(0,0,0,0.2);
-    border-bottom: 1px solid #a78675;
-}
-#friendsApp.km-ios .km-view-title
-{
-    font-weight: normal;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-}
-#friendsApp.km-android .km-view-title
-{
-    display: block;
-    visibility: visible;
-    margin: 0;
-    padding: .5em 1em;
-    font-size: 1.4rem;
-    font-weight: normal;
-    background-color: #222;
-    border-bottom: 2px solid #fe8a3d;   
-    line-height: 1.2;
-}
-.km-root #friendsApp.km-android .km-navbar
-{
-    padding-right: 0;   
-    padding-left: 0;   
-}
-#friendsApp.km-android .km-navbar .km-icon
-{
-    margin-left: 0;
-    margin-right: 0;
-}
-#friendsApp.km-android .km-navbar
-{
-    background-color: #272727;    
-}
-#friendsApp.km-android .km-rightitem .km-button
-{
-    background-color: #e45600;
-    padding-left: 1.2rem;
-    padding-right: 1.2rem;
-}
-/* App Footer */
-.welcome-scrn .km-footer
-{
-    padding: 1.1em 0;
-    text-align: center;
-    color: #999;    
-}
-#friendsApp.km-ios .welcome-scrn .km-footer
-{
-    background-color: rgba(0,0,0,0.2);
-}
-#friendsApp.km-android .welcome-scrn .km-footer
-{
-    position: absolute;
-    bottom: 0;
-    background-color: #272727;
-}
-/* Forms */
-#friendsApp.km-android .form-view .km-list > li
-{
-    padding: 0;
-}
-.form-view .km-listview label
-{
-    padding: .5rem 1rem;
-    display: inline-block;
-    vertical-align: top;
-    width: 40%;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    
-    font-size: 1.1rem;
-}
-#friendsApp.km-ios .form-view .km-listview label
-{
-    background-color: #F4F4F4;
-    border-right: 1px solid #e0dfdf;
-    font-weight: bold;
-}
-#friendsApp.km-android .form-view .km-listview label
-{
-    background-color: #323232;
-    border-right: 1px solid #404040;
-}
-.form-view .km-listview .txtarea-wrp label
-{
-    height: 7rem;
-}
-#friendsApp.km-ios .form-view .km-listview input
-{
-}
-.km-list .txtarea-wrp
-{
-    height: 7rem;
-}
-textarea
-{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    
-    line-height: normal;
-    font-family: inherit;
-    outline: 0;
-    border: 0;
-    font-size: 1.1rem;
-    padding: .6em;
-}
-.share-view textarea
-{
+    margin: 0; 
+    height: 100%;
     width: 100%;
-    height: 8rem;
-    font-size: 1rem;
 }
-.km-list textarea
+
+/* Add Post styles */
+.panel
 {
-    right: 0;
-    top: 0;
-    height: 6.5rem;
-    position: absolute;
-    z-index: 1;
-    background: transparent;   
-    overflow: auto;
+    padding: 20px;
 }
-#friendsApp .km-list textarea
+
+.titleTextPanel
 {
-    margin-right: 0;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 5px;
+    width: 255px;
 }
-.km-list input[type="password"], .km-list input[type="search"], .km-list input[type="number"], .km-list input[type="tel"], .km-list input[type="url"], .km-list input[type="email"], .km-list input[type="text"]:not(.k-input), .km-list input[type="month"], .km-list input[type="color"], .km-list input[type="week"], .km-list input[type="date"], .km-list input[type="time"], .km-list input[type="datetime"], .km-list select:not([multiple]), .km-list .k-dropdown, .km-list textarea
+
+.addPostButton, .addPhotoButton
 {
-    width: 56%;
+    margin: 20px;
 }
-#friendsApp.km-ios .km-list input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not(.k-input):not(.k-button), #friendsApp.km-ios .km-list select:not([multiple]), #friendsApp.km-ios .km-list .k-dropdown-wrap, #friendsApp.km-ios .km-list textarea
+.addPhotoButton
 {
-    color: #666;
+    margin-top: 40px;
 }
-#friendsApp.km-android .km-list input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not(.k-input):not(.k-button), #friendsApp.km-android .km-list select:not([multiple]), #friendsApp.km-android .km-list .k-dropdown-wrap, #friendsApp.km-android textarea
-{
-    color: #ccc;
-    background-image: none;
-    border-bottom: 0;
-}
-.validation, .k-invalid-msg
-{
-    display: none;
-    margin: 1rem 0 0;
-    padding: 0 1rem;
-    color: #f00;
-}
-.share-form-wrp, .user-status-wrp, .take-avatar-wrp
-{
-    margin: 1rem;   
-}
-/* List widget */
-.no-items-msg
-{
-    margin: 1.5rem !important;
-    font-size: 1rem;
-    color: #ffc;
-}
-.no-items-msg b
-{
-    font-size: 1.2rem;
-    font-weight: normal;
-}
-#friendsApp.km-ios .km-listinset, #friendsApp.km-ios .km-listgroupinset .km-list,
-#friendsApp.km-ios .km-listinset > li:first-child, #friendsApp.km-ios .km-listgroupinset .km-list > li:first-child,
-#friendsApp.km-ios .km-listinset > li:last-child, #friendsApp.km-ios .km-listgroupinset .km-list > li:last-child
-{
-    border-radius: 0;   
-}
-#friendsApp.km-ios .form-view .km-list > li
-{
-    padding: 0;   
-    background-color: #fff;
-}
-#friendsApp.km-ios .form-view .km-list > li
-{
-    min-height: 2.3em;
-}
-#friendsApp.km-android .form-view .km-list
-{
-    background-color: #222;
-}
-#friendsApp.km-android .form-view .km-listinset
-{
-    margin-top: 1em;
-}
-/* Welcome screen */
-.welcome-scrn h1
-{
-    position: relative;
-    margin: 4em 2em 1.5em;
-    margin-left: 1em;
-    margin-right:1em;
-    color: #fff;
-    text-align: right;
-    line-height: .9;
-    font-size: 1.5em;
-    font-weight: normal;
-    color: #e6e6e6;
-}
-.welcome-scrn h1 b
-{
-    display: block;
-    font-size: 3em;
-    text-shadow: 1px 2px 3px #000;    
-    color: #fff;
-}
-.welcome-scrn h1 b::before
-{
-    display: block;
-    content: " ";
-    width: 1.1em;
-    height: 1em;
-    
-    position: absolute;
-    top: -.8em;
-    right: .3em;
-    
-    background-image: url(images/sprite.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: cover;
-    background-color: transparent;
-    
-}
-.welcome-scrn .group-wrp
-{
-    margin: 1.5em 2em 0;
-    padding: 0;
-    list-style-type: none;
-    text-align: center;
-}
-.welcome-scrn .group-wrp li
-{
-    margin: 1.5em 0 0;
-    padding: 1.5em 0 0;    
-}
-.welcome-scrn .group-wrp li:first-child
-{
-    margin-top: 0;
-    padding-top: 0;
-}
-/* Activities */
-.activities-view .km-list
-{
-    margin: 1rem;
-    background-color: transparent;
-}
-.activities-view .km-list.comments-list
-{
-    margin-top: 0;   
-}
-#friendsApp .activities-view .km-list > li 
-{
-    margin-bottom: .2em;
-    padding: 1rem 0;
-    border-bottom: 0;
-    background: transparent url(images/border.png) repeat-x 0 0;
-    box-shadow: none;
-    -webkit-box-shadow: none;
-}
-.activities-view .km-list.comments-list > li
-{
-    padding-bottom: 1rem;
-}
-.activities-view .km-list > li:first-child
-{
-    padding-top: 0;
-    background-image: none;
-}
-#friendsApp.km-ios .activities-view .km-list > li
-{
-    border: 0;
-}
-#friendsApp.km-android .activities-view .km-list > li
-{
-}
-.activities-view .km-list > li >img, .user-status-wrp img
-{
-    float: left;
-}
-.user-info
-{
-    padding: 1rem;
-    border-bottom: 1px solid #ccc;   
-    line-height: 1.1 !important;
-    background-color: #fff;
-    font-size: 1rem;
-}
-.user-status-wrp .user-info, .share-form-wrp .user-info
-{
-    padding: 0;
-    height: 5rem;
-}
-.user-status-wrp .user-info h2, .share-form-wrp .user-info h2
-{
-    padding-top: 1.7rem;
-}
-.user-info h2
-{
-    margin: 0;
-    padding: 0;
-    font-size: 1.3rem;
-    color: #000;
-}
-.user-info h2 a
-{
-    color: #000 !important;   
-}
-.user-info img
-{
-    float: left;
-    margin-right: 1rem;
-    background-color: #ccc;
-    width: 5rem;
-    height: 5rem;
-}
-.user-info time
-{
-    font-size: .8rem;
-    color: #7f7f7f;
-}
-.user-share
-{
-    padding: 1rem;
-    background-color: #fff;
-    clear: both;
-    color: #000 !important;
-    font-size: 1rem;
-    line-height: 1.4;
-    
-    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);   
-}
-.share-view .user-share
-{
-    margin-bottom: 1rem;
-    padding: 0 0 .5rem;
-}
-#friendsApp.km-android .activities-view .user-share-txt
-{
-    font-size: 1rem;
-    color: #000 !important;
-}
-#friendsApp.km-ios .km-detail
+
+.hidden
 {
     display: none;
 }
 
-/* Tablets*/
-.km-tablet .km-header
+.contentTextPanel
 {
-    font-size: 1.2em;
+    padding: 10px;
+    width: 255px;
+    height: 100px;
+    background-color:#fff;
 }
-.km-tablet .km-button.btn-big
+
+.maxWidth
 {
-    min-width: 10em;
-    font-size: 2.5em;   
+    width: 100%;
 }
-.km-tablet .welcome-scrn .group-wrp
+
+/* COMMON STYLES*/
+.view-content h1, .view-content h2
 {
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
+    color: #fff;
+    font-size: 1.8em;
 }
-.km-tablet .form-view .km-listview label
+.view-content .post-content
 {
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-    
+    height:100px;
+    width: 255px;
 }
-.km-tablet .km-ios .km-list input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not(.k-input):not(.k-button), .km-tablet .km-ios .km-list select:not([multiple]), .km-tablet .km-ios .km-list .k-dropdown-wrap,
-.km-tablet.km-root input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not(.k-input):not(.k-button), .km-tablet.km-root select:not([multiple]), .km-tablet.km-root .k-dropdown,
-.km-tablet textarea
+.view-content h1.welcome
 {
-    font-size: 1.5rem;    
+    text-align: center;
 }
-.km-tablet .km-listinset
+.view-content h3
 {
-    margin: 2em;   
+    color: #42454a;
+    font-size: 1.1em;
 }
-.km-tablet .main-menu-view .km-list > li
+.view-content p
 {
-    font-size: 1.5rem;   
+    color: #4a4e54;
+    font-size: 1em;
 }
-.km-tablet .profile-view h2, .km-tablet .activities-view h3
+.view-content
 {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: -1rem;
-    font-size: 1.5rem;
+    background-color:#000;
+    text-align:center;
 }
-.km-tablet .km-ios .km-list.profile-about-txt > li, .km-tablet .km-android .km-list.profile-about-txt > li
+
+.position-left
 {
-    padding: .5rem 1rem;
-    font-size: 1.4rem;
+    float: left;
 }
-.km-tablet .no-items-msg
+.position-right
 {
-    margin: 2.5rem !important;
-    font-size: 1.5rem;
+    float: right;
 }
-.km-tablet .no-items-msg b
+.position.center
 {
-    font-size: 2rem;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
 }
-.km-tablet .user-info h2 
+
+/* DEVICE SPECIFIC STYLES*/
+#skin-change
 {
-    font-size: 1.7rem;
+    position: absolute;
+    right: 10px;
+    top: 10px;
 }
-.km-tablet .user-info time
+.km-ios .km-listview-wrapper .km-listinset li
 {
-    font-size: .95rem;    
+    background-color: #fff;
+    border-color: #ababab;
 }
-.km-tablet .user-share
+.km-ios .km-view .km-content
 {
-    padding: 2rem;
-    font-size: 1.4rem;
+    background-image: url(images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
 }
-.km-tablet .share-view textarea
+
+.km-android .km-view .contentTextPanel
 {
-    padding: 0;
+    padding: 10px;
+    width: 255px;
+    height: 140px;
+    background-color:#fff;
 }
-.km-tablet .social-info a
+
+.km-android .km-view .titleTextPanel
 {
-    font-size: 1.1rem;
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 5px;
+    width: 255px;
 }
-.km-tablet .activities-view .km-list, .km-tablet .share-form-wrp, .km-tablet .user-status-wrp
+.km-android .km-view .km-content
 {
-    margin: 2rem;   
-} 
-/* Android*/
-.km-tablet .km-android .activities-view .user-share-txt
-{   
-    font-size: 1.4rem;
+    background-image: url(images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
 }
-.km-tablet .km-android .welcome-scrn h1
+.km-tablet .km-ios .km-navbar .km-view-title
 {
-    font-size: 3em;    
-} 
-.km-tablet  #friendsApp.km-android .km-navbar .km-button
-{
-    height: 1.4em;
+    color: #fff;
+    text-shadow: 0 -1px rgba(255, 255, 255, 0.3);
 }
-/* iPad */
-.km-tablet #friendsApp.km-ios .km-view-title
+.km-android .view-content h1
 {
-    box-shadow: none;
-    -webkit-box-shadow: none;
-    text-shadow: none;
     color: #fff;
 }
-.km-tablet .km-ios .km-content
+.km-android .view-content p,
+.km-android .view-content h3
 {
-    background-color: transparent;   
+    color: #2e5968;
 }
-.km-tablet .km-ios :not(.km-tabstrip):not(.km-buttongroup) > .km-button
+
+.km-ios .km-list > li,
+.km-flat .km-list>li
 {
-    background-color: #ff6c00;
+    background: none;
+    border: none;
 }
-.km-tablet .km-ios :not(.km-tabstrip):not(.km-buttongroup) > .km-button.btn-signup
+
+/* Separator Style*/
+.separator > .dark
 {
-    background-color: #272727;
+    background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(30%, rgba(0, 0, 0, 0.2)), color-stop(50%, rgba(0, 0, 0, 0.2)), color-stop(70%, rgba(0, 0, 0, 0.2)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0) 100%);
+    height: 1px;
+    border: none;
+    width: 100%;
+    opacity: 0.3;
 }
-.km-tablet .km-ios :not(.km-tabstrip):not(.km-buttongroup) > .km-button.km-back 
+.separator > .light
 {
-background-color: #A36A57;
+    background: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 1)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 100%);
+    height: 1px;
+    border: none;
+    width: 100%;
+    opacity: 0.3;
 }
-.km-tablet .km-ios .welcome-scrn h1
+
+/* RETINA DISPLAY STYLES*/
+@media only screen and (-webkit-min-device-pixel-ratio: 2) , (min-resolution: 192dpi)
 {
-    font-size: 3.5em;    
+    .img
+    {
+        background-image: url(../styles/images/icenium2x.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .logo
+    {
+        background-image: url(../styles/images/logo2x.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #map-search
+    {
+        background-image: url(../styles/images/search2x.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #map-search:active
+    {
+        background-image: url(../styles/images/search_active2x.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #map-navigate-home
+    {
+        background-image: url(../styles/images/location2x.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    #map-navigate-home:active
+    {
+        background-image: url(../styles/images/location_active2x.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+    .weather-icon
+    {
+        background-image: url(../styles/images/sprite-weather2x.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 }
-.km-tablet .km-ios .profile-avatar-name h1
-{
-    margin-top: 2rem;
-    font-size: 1.7em;    
-    width: auto;
-}
-.km-tablet .km-ios .profile-view .km-list.def-list .lbl, .km-tablet .km-ios .profile-view .km-list.def-list .val
-{
-    font-size: 1.4em;
-} 

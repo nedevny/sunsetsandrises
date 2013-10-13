@@ -1,0 +1,20 @@
+<div id="photos" 
+     data-role="view"  
+     data-title="Photos"
+     data-transition="slide"
+     data-model="app.photos.viewModel"
+     data-show="app.photos.viewModel.show"
+     data-layout="main-layout">
+    
+    <div class="view-content">
+         <ul id="photos"
+             data-role="listview"
+             data-bind="source: photos"
+             data-style="inset"
+             data-template="photo-template"></ul>
+    </div>
+
+    <script type="text/x-kendo-tmpl" id="photo-template">
+        <a data-role="listview-link" href="views/photo.html\#photo?title=${Title}&imageUrl=${ImageUrl}&description=${Description}">${Title}</a>
+    </script>
+</div>

@@ -1,0 +1,53 @@
+<div id="add" 
+     data-role="view"  
+     data-title="Add"
+     data-transition="slide"
+     data-model="app.add.viewModel"
+     data-layout="main-layout">
+
+    <div class="view-content">
+        <ul id="button-group" 
+            data-role="buttongroup" 
+            data-index="0" 
+            data-select="selectButton">
+            
+            <li>Post</li>
+            <li>Photo</li>
+        </ul>
+        
+        <div id="post-panel" class="panel">
+            <input data-bind="value: title" placeholder="Title" class="titleTextPanel" />
+            <input data-bind="value: author" placeholder="Author" class="titleTextPanel" />
+            <textarea data-bind="value: content" class="contentTextPanel"></textarea>
+            <a data-role="button" id="add-post" data-bind="click: savePost" class="addPostButton">Add Post</a>
+        </div>
+        
+        
+        <div id="photo-panel" class="hidden panel">
+            <a data-role="button" data-bind="click: capture" class="captureButton">Take Picture</a>
+            <img data-bind="attr: { src: imageUrl}" width="250" />
+            <input data-bind="value: title" placeholder="Title" class="titleTextPanel" />
+            <textarea data-bind="value: description" class="contentTextPanel"></textarea>
+            <a data-role="button" id="add-photo" data-bind="click: savePhoto" class="addPhotoButton">Add Photo</a>
+        </div>
+    </div>
+    
+    
+    <script>
+        function selectButton() {
+            var index = this.current().index();
+            $("#post-panel").hide();
+            $("#photo-panel").hide();
+            switch (index) {
+                case 0:
+                    $("#post-panel").show();
+                    break;
+                case 1:
+                    $("#photo-panel").show();
+                    break;
+                case 2:
+                    break;
+            }
+        }
+    </script>
+</div>

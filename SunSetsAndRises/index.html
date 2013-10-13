@@ -6,39 +6,47 @@
         <script src="cordova.js"></script>
         <script src="kendo/js/jquery.min.js"></script>
         <script src="kendo/js/kendo.mobile.min.js"></script>
+        <script src="scripts/lib/rsvp.min.js"></script>
         <script src="scripts/lib/everlive.all.min.js"></script>
-        <script src="scripts/app/identity-provider.js"></script>
-        <script src="scripts/app/main.js" type="text/javascript"></script>
+        <script src="scripts/app/extensions.js"></script>
+        <script src="scripts/app/add.js"></script>
+        <script src="scripts/app/photos.js"></script>
+        <script src="scripts/app/photo.js"></script>
+        <script src="scripts/app/posts.js"></script>
+        <script src="scripts/app/post.js"></script>
+        <script src="scripts/app/home.js"></script>
+        <script src="scripts/app/app.js"></script>
+        <script src="scripts/app/nearest.js"></script>
 
         <link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
         <link href="styles/main.css" rel="stylesheet" />
     </head>
-    <body id="friendsApp">
-        <section data-role="layout" data-id="default">
-            <!--View content will render here-->
-        </section>
-        <!--WELCOME VIEW -->
-        <div data-role="view" id="welcome" data-layout="default" class="welcome-scrn form-view" data-model="app.viewModels.login">
-            <h1><b>Everlive</b> sample application</h1>
-            <form id="login-form">
-                <ul data-role="listview" data-style="inset">
-                    <li><label for="loginUsername">Username</label> <input type="text" id="loginUsername" required validationMessage="Username is required!" /></li>
-                    <li><label for="loginPassword">Password</label> <input type="password" id="loginPassword" required validationMessage="Password is required!" /></li>
-                </ul>
-            </form>
-            <ol class="group-wrp">
-                <li>
-                    <span data-role="touch" data-bind="events: { tap: login }" style="display: inline-block">
-                        <a data-role="button" class="btn-login btn-big">Login</a>
-                    </span>
-                    <span data-role="touch" data-bind="events: { tap: loginWithFacebook }" style="display: inline-block">
-                        <a data-role="button" class="btn-login-fb btn-big">Login</a>
-                    </span>
-                </li>
-                <li class="b-top"><a data-role="button" href="views/signupView.html" class="btn-signup btn-big">Sign up</a> </li>
-            </ol>
+    <body>       
+        
+        <div id="home" 
+             data-role="view"  
+             data-title="SetsAndRises"
+             data-transition="slide"
+             data-model="app.home.viewModel"
+             data-show="app.home.viewModel.show"
+             data-hide="app.home.viewModel.hide"
+             data-layout="main-layout">
+            <h1><b>Sun</b> Sets&Rises</h1>
+        </div>
 
-            <div data-role="footer"><p>Powered by Icenium Everlive.</p></div>
+        <!--Layout-->
+        <div data-role="layout" data-id="main-layout">
+
+            <!--Footer-->
+            <div data-role="footer">
+                <div data-role="tabstrip">
+                    <a href="#home" data-icon="home">Home</a>
+                    <a href="views\photos.html#photos" data-icon="organize">Photos</a>
+                    <a href="views\posts.html#posts" data-icon="featured">Posts</a>
+                    <a href="views\add.html#add" data-icon="add">Add</a>
+                    <a href="views\nearest.html#nearest" data-icon="globe">Nearest</a>
+                </div>
+            </div>
         </div>
     </body>
 </html>

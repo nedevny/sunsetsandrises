@@ -1,0 +1,20 @@
+<div id="posts" 
+     data-role="view"  
+     data-title="Posts"
+     data-transition="slide"
+     data-model="app.posts.viewModel"
+     data-show="app.posts.viewModel.show"
+     data-layout="main-layout">
+    
+    <div class="view-content">
+         <ul id="posts"
+             data-role="listview"
+             data-bind="source: posts"
+             data-style="inset"
+             data-template="post-template"></ul>
+    </div>
+
+    <script type="text/x-kendo-tmpl" id="post-template">
+        <a data-role="listview-link" href="views/post.html\#post?title=${Title}&author=${Author}&content=${Content}">${Title}</a>
+    </script>
+</div>
