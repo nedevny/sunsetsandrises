@@ -9,6 +9,10 @@ body, html
 .panel
 {
     padding: 20px;
+    float:right;
+}
+input{
+    display:block;
 }
 
 .titleTextPanel
@@ -128,6 +132,36 @@ body, html
     width: 255px;
 }
 .km-android .km-view .km-content
+{
+    background-image: url(images/image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #fff;
+}
+
+
+.km-tablet .km-view .contentTextPanel
+{
+    padding: 10px;
+    width: 255px;
+    height: 240px;
+    background-color:#fff;
+}
+
+.km-tablet .km-view .titleTextPanel
+{
+    padding: 10px;
+    font-size: 24px;
+    margin-bottom: 5px;
+    width: 255px;
+}
+
+.km-tablet .km-view .view-content
+{
+    height:800px;
+}
+
+.km-tablet .km-view .km-content
 {
     background-image: url(images/image.jpg);
     background-repeat: no-repeat;
