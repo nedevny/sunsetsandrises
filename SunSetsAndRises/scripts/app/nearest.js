@@ -21,7 +21,8 @@
             .then(function(location) {
                 
                 var query = new Everlive.Query();
-                query.where().nearSphere('Geolocation', [parseFloat(location.coords.longitude),parseFloat(location.coords.latitude)], 50,'km');
+                query.where().nearSphere('Geolocation',
+                [parseFloat(location.coords.longitude),parseFloat(location.coords.latitude)], 50,'km');
                 
                 var data = Everlive.$.data('Photos');
                 data.get(query)
